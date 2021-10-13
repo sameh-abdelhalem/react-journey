@@ -1,4 +1,5 @@
 import Expenses from "./components/Expenses/Expenses";
+import NewExpense from "./components/NewExpense/NewExpense";
 const App = () => {
   const expenses = [
     {
@@ -24,8 +25,7 @@ const App = () => {
   return (
     <div>
       <div>
-        <h2>Let's get started!</h2>
-        <p>this is also visible</p>
+        <NewExpense />
       </div>
       <Expenses expenses={expenses}></Expenses>
     </div>
@@ -34,4 +34,4 @@ const App = () => {
 
 export default App;
 
-// 39 composition
+// 49 a closer look at useState Hook
