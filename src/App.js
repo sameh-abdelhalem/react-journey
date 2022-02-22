@@ -22,10 +22,14 @@ const App = () => {
       date: new Date(2021, 5, 12),
     },
   ];
+  const expenseDataHandler = expenseData=>{
+    console.log(expenseData)
+
+  }
   return (
     <div>
       <div>
-        <NewExpense />
+        <NewExpense onExpenseDataSave={expenseDataHandler} />
       </div>
       <Expenses expenses={expenses}></Expenses>
     </div>
@@ -34,4 +38,4 @@ const App = () => {
 
 export default App;
 
-// 49 a closer look at useState Hook
+// 61. Controlled vs Uncontrolled Components & Stateless vs Stateful Components
