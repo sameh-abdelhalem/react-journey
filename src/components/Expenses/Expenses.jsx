@@ -14,7 +14,8 @@ const filteredExpenses = props.expenses.filter((expense)=>expense.date.getFullYe
     <div>
     <Card className="expenses">
       <ExpensesFilter selectedDate={filteredDate} onDateSelection={onDateSelectionHandler}/>
-      {filteredExpenses.map(expense=> <ExpenseItem key={expense.id }date={expense.date} title = {expense.title} amount={expense.amount} />)}
+        {filteredExpenses.length===0 ?<p>No Expenses Found</p>:filteredExpenses.map(expense=> <ExpenseItem key={expense.id }date={expense.date} title = {expense.title} amount={expense.amount} />)
+}
     
     </Card> 
     </div>
