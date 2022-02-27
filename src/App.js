@@ -31,12 +31,13 @@ const App = () => {
     setExpenses(prevExpense=>[expenseData,...prevExpense,])
 
   }
+ 
   return (
     <div>
       <div>
         <NewExpense onExpenseDataSave={expenseDataHandler} />
       </div>
-      <Expenses expenses={expenses}></Expenses>
+      <Expenses expenses={expenses} ></Expenses>
     </div>
   );
 };
