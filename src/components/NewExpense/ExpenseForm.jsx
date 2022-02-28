@@ -27,7 +27,19 @@ const ExpenseForm = (props) => {
     setDateVal('')
     setTitleVal('')
   }
+  const [expensesBtnState,setExpensesBtnState]= useState(true);
+
+  const showOrHideForm=()=>{
+
+    setExpensesBtnState((prevState)=>!prevState)
+  }
   return (
+    expensesBtnState?
+    
+  <div className="add-new-expense">
+    <button onClick={showOrHideForm} >Add New Expense</button>
+  </div>
+  :
     <form onSubmit={submitHandler}>
       <div className="new-expense__controls">
         <div className="new-expense__control">
@@ -60,7 +72,7 @@ const ExpenseForm = (props) => {
         </div>
       </div>
       <div className="new-expense__actions">
-        <button type="submit">Add Expense</button>
+        <button type="submit">Add Expense</button> <button onClick={showOrHideForm}>Cancel</button>
       </div>
     </form>
   );
